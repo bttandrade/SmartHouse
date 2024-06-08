@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Inteligente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" defer></script>
+    <script type="module" src="script.js" defer></script>
+</head>
+<body>
+    <main class="form-signin w-100 m-auto p-5" id="form-login">
+        <div>
+            <div class="form-floating mb-2">
+                <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" autocomplete="off">
+                <label for="floatingInput">Endereço de Email</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="pass" placeholder="Senha">
+                <label for="floatingPassword">Senha</label>
+            </div>
+
+            <div class="form-check text-start my-3">
+                <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Mostrar senha</label>
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary w-100 py-2" id="botao">Entrar</button>
+                <button class="btn btn-warning w-100 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastrar conta</button>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastre a sua conta</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-floating mb-4">
+                            <input type="email" class="form-control" id="emailRegister" placeholder="nome@exemplo.com" autocomplete="off">
+                            <label for="floatingInput">Endereço de Email</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="passCadastro" placeholder="Senha">
+                            <label for="floatingPassword">Senha</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="passConfirm" placeholder="Confirmar senha">
+                            <label for="floatingPassword">Confirmar senha</label>
+                        </div>
+                        <div class="form-check text-start my-3">
+                            <input class="form-check-input" type="checkbox" id="flexCheckDefaultCadastro">
+                            <label class="form-check-label" for="flexCheckDefault">Mostrar senha</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" id="registerButton">Cadastrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main class="form-signin text-center w-100 m-auto p-5" id="form-controle">
+        <div>
+            <div class="d-grid gap-2">
+                <label class="text-center m-1">Controles</label>
+                <div class="text-center form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="openDoorSwitch">
+                    <label class="form-check-label" for="openDoorSwitch" id="labelDoorSwitch">Porta</label>
+                </div>
+                
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="turnOnAirConditioningSwitch">
+                    <label class="form-check-label" for="turnOnAirConditioningSwitch" id="labelAirConditioningSwitch">Ar condicionado</label>
+                </div>
+                
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="turnOnLightSwitch">
+                    <label class="form-check-label" for="turnOnLightSwitch" id="labelLightSwitch">Lâmpada</label>
+                </div>
+                
+                <button class="btn btn-light w-100 py-2" id="logoutButton">Logout</button>
+                <label id="status"></label>
+            </div>
+        </div>
+    </main>
+    
+
+    <main class="form-signin w-100 m-auto p-4" id="form-changePass">
+        <div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="newPass" placeholder="Nova senha">
+                <label for="floatingPassword">Nova senha</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="newPassConfirm" placeholder="Confirmar nova senha">
+                <label for="floatingPassword">Confirmar nova senha</label>
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary w-100 py-2" id="changePassButton">Trocar a senha</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

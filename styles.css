@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(144deg, rgba(2,0,36,1) 13%, rgba(9,9,121,1) 35%, rgba(7,65,158,1) 53%, rgba(0,212,255,1) 100%);
+}
+
+main{
+    box-shadow: 0 0 9px black;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.form-signin input[type="password"],
+.form-signin input[type="text"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#form-controle,
+#form-changePass{
+    display: none;
+}
+
+#logoutButton{
+    background-color: rgb(54, 20, 207);
+    color: white;
+}
